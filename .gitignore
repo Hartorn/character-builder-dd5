@@ -1,6 +1,2 @@
 node_modules
-/public
-.idea
 /app/npm-debug.log
-/bitballoon-secret.js
-/docs

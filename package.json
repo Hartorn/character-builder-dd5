@@ -15,7 +15,6 @@
   "scripts": {
     "bundle": "better-npm-run bundle",
     "build": "npm run bundle",
-    "deploy": "node ./deploy.js",
     "start": "npm run start:npm",
     "start:npm": "better-npm-run webpack-dev-server-npm-focus",
     "watch": "better-npm-run watch"
@@ -34,7 +33,7 @@
         "BABELIFIED_PATH": "./app",
         "ENTRY_FILE_PATH": "./app/index",
         "PAGE_TITLE": "D&D 5 - Character builder",
-        "OUTPUT_DIR": "./docs",
+        "OUTPUT_DIR": "./",
         "OUTPUT_PUBLIC_PATH": "./",
         "GENERATE_HTML": false,
         "LOCAL_FOCUS": false,
