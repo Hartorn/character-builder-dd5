@@ -7,3 +7,6 @@ branches:
   only:
   - develop
   - release
+after_success: npm run deploy
+script:
+   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" && "$TRAVIS_BRANCH" == "master" ]; then npm run deploy; fi'
