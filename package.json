@@ -28,7 +28,7 @@
   },
   "betterScripts": {
     "bundle": {
-      "command": "webpack --progress",
+      "command": "webpack",
       "env": {
         "ANCHOR_CLASS": "demo-app",
         "BABELIFIED_PATH": "./app",
