@@ -5,6 +5,7 @@
 // Setting dark background
 [data-focus='layout'] {
     background-color: $background-grey;
+    min-height: 100vh;
 }
 
 // Changing text color for list elt
@@ -26,9 +27,12 @@
 }
 
 // Changing color of the menu left icons
-[data-focus="menu-left"] [data-focus="menu-items"] li a {
+[data-focus="menu-left"] [data-focus="menu-items"]{
+    list-style: none;
+    li a {
     color :$custom-white !important; // Overriding style color:white
-}  
+    }  
+}
 
 // Adaptating title 
 .website-title {
