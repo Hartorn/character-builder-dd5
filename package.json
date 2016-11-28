@@ -43,7 +43,7 @@
         "SOURCE_MAPS": false,
         "node_env": "production",
         "BABEL_ENV": "production",
-        "BASE_URL": "/"
+        "BASE_URL": "/character-builder-dd5/"
       }
     },
     "watch": {
