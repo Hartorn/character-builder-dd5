@@ -1,0 +1,6 @@
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+[data-focus='menu-brand'] {
+    @include background-cover('./logo.png')
+}

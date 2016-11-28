@@ -1,15 +1,14 @@
 @import '../../_variables.scss';
 @import '../../_mixins.scss';
 
-/*.iconClass {
-    &.highElf {
-        @include background-cover('./race_elfe1.png')
+.iconClass {
+    &.warrior {
+        @include background-cover('./class_guerrier.png')
     }
-    &.woodElf {
-        @include background-cover('./race_elfe2.png')
+    &.wizard {
+        @include background-cover('./class_magicien.png')
     }
-
-}*/
+}
 
 /*$bg-halfelf: url('./race_demielfe.png');
 $bg-halforc: url('./race_demiorc.png');

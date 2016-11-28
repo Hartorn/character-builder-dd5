@@ -8,7 +8,39 @@
     &.woodElf {
         @include background-cover('./race_elfe2.png')
     }
-
+    &.darkElf {
+        @include background-cover('./race_drow.png')
+    }
+    &.rockGnome {
+        @include background-cover('./race_gnome1.png')
+    }
+    &.forestGnome {
+        @include background-cover('./race_gnome2.png')
+    }
+    &.halfElf {
+        @include background-cover('./race_demielfe.png')
+    }
+    &.halfOrc {
+        @include background-cover('./race_demiorc.png')
+    }
+    &.lighfootHalfling {
+       @include background-cover('./race_halfelin1.png')
+    }
+    &.stoutHalfling {
+       @include background-cover('./race_halfelin2.png')
+    }
+    &.tiefling {
+       @include background-cover('./race_tieffelin.png')
+    }
+    &.human {
+       @include background-cover('./race_humain.png')
+    }
+    &.hillDwarf {
+       @include background-cover('./race_nain1.png')
+    }
+    &.mountainDwarf {
+       @include background-cover('./race_nain2.png')
+    }
 }
 
 /*$bg-halfelf: url('./race_demielfe.png');

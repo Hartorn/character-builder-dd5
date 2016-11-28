@@ -10,7 +10,7 @@ const routes = [
         childRoutes: [
             {
                 path: ':name',
-                component: ({params}) => (<RaceDetail raceName={params.name} />)
+                component: (props) => (<RaceDetail raceName={props.params.name} {...props} />)
             }
         ]
     }

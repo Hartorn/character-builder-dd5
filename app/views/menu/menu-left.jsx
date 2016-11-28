@@ -1,61 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 import history from 'focus-core/history';
 import Menu from 'focus-components/components/menu';
-import {component as Modal} from 'focus-components/application/popin';
+import { component as Modal } from 'focus-components/application/popin';
+
+import { Link } from '../../components/router';
+import { navigate } from '../../utilities/router';
 
 //custom web component
 import QuickSearchView from '../search/quick';
 
-export default React.createClass({
-    displayName: 'DemoMenuLeft',
-    getInitialState () {
-        return {
-            isQuickSearchModalOpen: false
-        };
-    },
+class MenuLeft extends Component {
+
     _getMenuItems() {
         return [
-            { icon:'home', onClick:() => { this._onHomeClick(); } }, // route: 'home'
-            { icon:'search', onClick:() => { this._onQuickSearchModalToggle() }},
-            { icon:'build', onClick:() => { this._onAdminClick(); } }
+            { icon: 'home', route: 'home' }, // route: 'home'
+            { icon: 'pets', route: 'races' },
+            { icon: 'history', route: 'backgrounds' },
+            { icon: 'face', route: 'classes' },
+            { icon: 'build', route: 'generator' }
         ];
-    },
-
-    _onHomeClick() {
-        this._onMenuItemClick();
-    },
-
-    _onAdminClick() {
-        this._onMenuItemClick();
-    },
-
-    _onMenuItemClick() {
-        this.setState({
-            isQuickSearchModalOpen: false
-        });
-    },
-
-    _onQuickSearchModalToggle() {
-        const {isQuickSearchModalOpen} = this.state;
-        this.setState({
-            isQuickSearchModalOpen: !isQuickSearchModalOpen
-        });
-    },
+    }
 
     render() {
         const items = this._getMenuItems();
-        const {isQuickSearchModalOpen} = this.state;
         return (
             <div>
-                <Menu onPopinClose={this._onQuickSearchModalToggle} items={items} handleBrandClick={this._onHomeClick} />
-                {isQuickSearchModalOpen &&
-                    <div data-demo='quick-search-area'>
-                        <Modal open={true} type='from-menu'>
-                            <QuickSearchView handleClosePopin={this._onQuickSearchModalToggle} />
-                        </Modal>
-                    </div>
-                }
+                <Menu items={items} LinkComponent={(props) => (<Link {...props} />)} handleBrandClick={() => navigate('home')} />
             </div>
         );
     }
-});
+}
+
+MenuLeft.displayName = 'MenuLeft';
+MenuLeft.defaultProps = {
+}
+MenuLeft.propTypes = {
+
+};
+
+export default MenuLeft;

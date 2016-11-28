@@ -1,0 +1,38 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+
+// Setting dark background
+[data-focus='layout'] {
+    background-color: $background-grey;
+}
+
+// Changing text color for list elt
+.mdl-list__item {
+    color:$custom-white;
+}
+
+// Changing background color of the left menu
+[data-focus="menu-left"] {
+    background-color: $light-black;
+    [data-focus="menu-brand"] {
+        background-color: $dark-black;
+    }
+}
+
+// Changing background color of the header
+[data-focus='header-scrolling'] [data-focus="header-top-row"] {
+    background-color: $light-black;
+}
+
+// Changing color of the menu left icons
+[data-focus="menu-left"] [data-focus="menu-items"] li a {
+    color :$custom-white !important; // Overriding style color:white
+}  
+
+// Adaptating title 
+.website-title {
+    margin: 0;
+    color: $red-dd;
+    text-align: center;
+}

@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 
 const defaultProps = {
 
@@ -13,7 +13,7 @@ class RaceDetail extends Component {
     render() {
         return (
             <div>
-            {this.props.raceName}
+                {this.props.raceName}
             </div>
         );
     }

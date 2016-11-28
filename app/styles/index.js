@@ -5,7 +5,13 @@ import 'focus-components/style';
 import 'material-design-icons-iconfont/dist/material-design-icons.scss';
 
 //--------------------------------------------------------------------------
+// Styles for font
+import './font/index.scss';
 // Styles for icons
-import './img/backgrounds/index.scss';
-import './img/classes/index.scss';
-import './img/races/index.scss';
+import './img';
+
+// Styles for components
+import '../components/list/index.scss';
+
+// Styles for the application
+import './layout.scss'

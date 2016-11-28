@@ -1,16 +1,44 @@
 @import '../../_variables.scss';
 @import '../../_mixins.scss';
 
-/*.iconClass {
-    &.highElf {
-        @include background-cover('./race_elfe1.png')
+.iconClass {
+    &.acolyte {
+        @include background-cover('./back_acolyte.png')
     }
-    &.woodElf {
-        @include background-cover('./race_elfe2.png')
+    &.charlatan {
+        @include background-cover('./back_charlatan.png')
     }
-
-}*/
-
-/*$bg-halfelf: url('./race_demielfe.png');
-$bg-halforc: url('./race_demiorc.png');
-$bg-drakeide: url('./race_drakeide.png');*/
+    &.criminal {
+        @include background-cover('./back_criminel.png')
+    }
+    &.entertainer {
+        @include background-cover('./back_amuseur.png')
+    }
+    &.folkHero {
+        @include background-cover('./back_peuple.png')
+    }
+    &.guildArtisan {
+        @include background-cover('./back_artisan.png')
+    }
+    &.hermit {
+        @include background-cover('./back_ermite.png')
+    }
+    &.noble {
+        @include background-cover('./back_noble.png')
+    }
+    &.outlander {
+        @include background-cover('./back_outlander.png')
+    }
+    &.sage {
+        @include background-cover('./back_sage.png')
+    }
+    &.sailor {
+        @include background-cover('./back_marin.png')
+    }
+    &.soldier {
+        @include background-cover('./back_soldat.png')
+    }
+    &.urchin {
+        @include background-cover('./back_grosBras.png')
+    }
+}
