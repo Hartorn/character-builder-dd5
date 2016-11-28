@@ -1,14 +1,14 @@
 CACHE MANIFEST
 # v0.0.1 28-11-2016
-favicon.ico
-012cf6a10129e2275d79d6adac7f3b02.woff
-a37b0c01c0baf1888ca812cc0508f6e2.ttf
-dd5-character-builder.css
-dd5-character-builder.js
-e79bfd88537def476913f3ed52f4f4b3.eot
+character-builder-dd5/favicon.ico
+character-builder-dd5/012cf6a10129e2275d79d6adac7f3b02.woff
+character-builder-dd5/a37b0c01c0baf1888ca812cc0508f6e2.ttf
+character-builder-dd5/dd5-character-builder.css
+character-builder-dd5/dd5-character-builder.js
+character-builder-dd5/e79bfd88537def476913f3ed52f4f4b3.eot
 
 FALLBACK:
-/* /
+/character-builder-dd5/* /
 
 NETWORK:
 *
