@@ -2,9 +2,3 @@ language: node_js
 node_js: node
 install: npm install
 script: npm run build
-# safelist
-branches:
-  only:
-  - develop
-  - release
-after_success: 'if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "release" ]]; then npm run deploy; fi'
