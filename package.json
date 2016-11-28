@@ -35,7 +35,7 @@
         "PAGE_TITLE": "D&D 5 - Character builder",
         "API_HOST": "localhost",
         "API_PORT": 8080,
-        "OUTPUT_DIR": "./",
+        "OUTPUT_DIR": "./production",
         "OUTPUT_PUBLIC_PATH": "./",
         "GENERATE_HTML": false,
         "LOCAL_FOCUS": false,
@@ -77,7 +77,7 @@
       }
     }
   },
-  "dependencies": {
+  "devDependencies": {
     "animate.css": "^3.4.0",
     "autoprefixer-loader": "^3.2.0",
     "babel-cli": "^6.4.5",
