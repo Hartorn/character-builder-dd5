@@ -2,7 +2,7 @@
   "author": "Hartorn",
   "name": "dd5-character-builder",
   "description": "Character builder for D&D 5",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
   "license": "MIT",
   "repository": {
     "type": "git",
