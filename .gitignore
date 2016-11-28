@@ -3,4 +3,4 @@ node_modules
 .idea
 /app/npm-debug.log
 /bitballoon-secret.js
-/production
+/docs
