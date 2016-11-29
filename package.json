@@ -39,10 +39,10 @@
         "LOCAL_FOCUS": false,
         "LEGACY_SEARCH_API": false,
         "DEV": false,
-        "MINIMIFY": false,
+        "MINIMIFY": true,
         "SOURCE_MAPS": false,
-        "node_env": "dev",
-        "BABEL_ENV": "dev",
+        "node_env": "production",
+        "BABEL_ENV": "production",
         "BASE_URL": "/character-builder-dd5/"
       }
     },
