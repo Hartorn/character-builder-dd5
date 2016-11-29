@@ -7804,7 +7804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					"BABELIFIED_PATH": "./app",
 					"ENTRY_FILE_PATH": "./app/index",
 					"PAGE_TITLE": "D&D 5 - Character builder",
-					"OUTPUT_DIR": "./",
+					"OUTPUT_DIR": "./docs",
 					"OUTPUT_PUBLIC_PATH": "./",
 					"GENERATE_HTML": false,
 					"LOCAL_FOCUS": false,
