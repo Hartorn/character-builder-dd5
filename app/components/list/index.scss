@@ -42,9 +42,17 @@ ul[data-dd~="empilable"] {
     //background-color: lightgrey;
     border-radius: 20px;
     cursor:pointer;
+    display:flex;
     &[data-dd~='selected']{
         border: 2px solid $red-dd;
         margin-bottom: -2px;
         margin-top: -2px;
+    }
+    >span{
+        flex:1;
+    }
+    >i.iconClass{
+        background-position: center;
+        background-size: 110%;
     }
 }
