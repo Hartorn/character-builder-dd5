@@ -12,16 +12,20 @@ import List from '../../components/list'
 import races from '../../stores/races'
 
 const defaultProps = {
-
+    LineContent: (race) => translate('races.' + race.name),
+    onClickLine: (race) => () => navigate('races/' + race.name)
 };
 
 const propTypes = {
+    raceName: PropTypes.string,
+    LineContent: PropTypes.any.isRequired,
+    onClickLine: PropTypes.func.isRequired
 };
 
 class RaceList extends Component {
 
     render() {
-        const route = this.props.params.name;
+        const route = this.props.raceName;
         const dataList = races.map(item => {
             return {
                 translatedName: translate('races.' + item.name),
@@ -31,35 +35,24 @@ class RaceList extends Component {
             };
         })
         .sort((a, b) => {
-    //  return a.race.localeCompare(b.race);
             const sortByRace = a.translatedRace.localeCompare(b.translatedRace);
             return sortByRace === 0 ? a.translatedName.localeCompare(b.translatedName) : sortByRace
         })
     .map(race => {
         return {
             avatar: {
-                //                    iconText: 'person',
                 className: `iconClass ${race.name}`
             },
-            LineContent: translate('races.' + race.name),
-            onClick: () => navigate('races/' + race.name),
+            LineContent: this.props.LineContent(race),
+            onClick: this.props.onClickLine(race),
             selected: race.selected
-            /*actions: [
-                {
-                    iconText: 'visibility',
-                    action: () => navigate('races/' + race.name)
-                },
-                {
-                    iconText: 'delete',
-                    action: () => alert('Delete')
-                }
-            ]*/
         }
     });
 
         return (
     <Grid>
         <Column size={4}>
+            <h3 className={'custom-font website-title'}>{translate('races.title')}</h3>
             <List
                 dataList={dataList}
                 isWrapping

@@ -1,0 +1,68 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+
+span.dash {
+    width: 100%;
+    background-color: $red-dd;
+    height: 1px;
+    margin-top: 9px;
+}
+
+.workflow-elt {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.inner-circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.past .inner-circle {
+    background-color: $red-dd;
+}
+
+.circle {
+    padding: 2px;
+    border: 2px solid $red-dd;
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto;
+}
+
+.futur {
+    .circle {
+        border-color: $light-black;
+    }
+    .dash {
+        background-color: $light-black;
+    }
+}
+
+.current .dash.right {
+    background-color: $light-black;
+}
+
+.workflow-text {
+    white-space: nowrap;
+    text-align: center;
+    color:$custom-white;
+}
+
+.workflow-elt:first-child .dash.left {
+    visibility: hidden;
+}
+.workflow-elt:last-child .dash.right {
+    visibility: hidden;
+}
+
+span.dash.right {
+    margin-left: 10px;
+}
+
+span.dash.left {
+    margin-right: 10px;
+}

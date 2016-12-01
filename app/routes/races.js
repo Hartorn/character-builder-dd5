@@ -6,11 +6,11 @@ import RaceDetail from '../views/races/detail';
 const routes = [
     {
         path: 'races',
-        component: RaceListView,
+        component: ({params, children}) => (<RaceListView children={children} raceName={params && params.name} />),
         childRoutes: [
             {
                 path: ':name',
-                component: (props) => (<RaceDetail raceName={props.params.name} {...props} />)
+                component: (props) => (<RaceDetail {...props} raceName={props.params.name} />)
             }
         ]
     }

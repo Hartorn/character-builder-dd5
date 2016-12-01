@@ -13,6 +13,7 @@ import './img';
 // Styles for components
 import '../components/list/index.scss';
 import '../components/article/styles/index.scss';
+import '../components/workflow/styles.scss';
 
 // Styles for the application
 import './layout.scss'

@@ -1,5 +1,26 @@
 export default {
+    workflow: {
+        state: {
+            class: 'Classe',
+            race: 'Race',
+            background: 'Background',
+            caracs: 'Caractéristiques',
+            classAbilities: 'Capacités de classe',
+            proficiency: 'Maîtrises',
+            options: 'Options',
+            healthPoints: 'Points de vie',
+            spells: 'Sorts connus',
+            equipment: 'Équipement',
+            personnalisation: 'Personnage',
+            synthesis: 'Synthèse'
+        }
+    },
+    generator: {
+        title: 'Créateur de personnage'
+    },
     races: {
+        title: 'Races',
+
         aarakocra: "Aarakocra",
 
         dwarf: "Nain",
@@ -34,6 +55,17 @@ export default {
         human: "Humain",
         "human-feat": "Humain (avec un don)",
         tiefling: "Tieffelin"
+    },
+    backgrounds: {
+        title: 'Backgrounds',
+
+        acolyte: 'Acolyte',
+        criminal: 'Criminel',
+        entertainer: 'Amuseur',
+        folkHero: 'Héros du peuple'
+    },
+    classes: {
+        title: 'Classes'
     },
     website: {
         title: "D&D 5 : Constructeur de personnage"

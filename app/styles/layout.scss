@@ -40,3 +40,18 @@
     color: $red-dd;
     text-align: center;
 }
+
+// No margin bottom to header
+[data-focus='header-scrolling'] {
+    margin-bottom: 0;
+}
+
+// Flex
+.flex {
+    display: flex;
+}
+
+// Space Around
+.space-around {
+    justify-content: space-around;
+}

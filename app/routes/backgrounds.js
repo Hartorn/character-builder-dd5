@@ -6,7 +6,7 @@ import BackgroundDetail from '../views/backgrounds/detail';
 const routes = [
     {
         path: 'backgrounds',
-        component: BackgroundListView,
+        component: (props) => (<BackgroundListView backgroundName={props.params && props.params.name} {...props} />),
         childRoutes: [
             {
                 path: ':name',

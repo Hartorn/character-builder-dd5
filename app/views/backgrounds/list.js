@@ -12,17 +12,22 @@ import List from '../../components/list'
 import backgrounds from '../../stores/backgrounds'
 
 const defaultProps = {
-
+    LineContent: (background) => translate('backgrounds.' + background.name),
+    onClickLine: (background) => () => navigate('backgrounds/' + background.name)
 };
 
 const propTypes = {
+    backgroundName: PropTypes.string,
+    LineContent: PropTypes.any.isRequired,
+    onClickLine: PropTypes.func.isRequired
 };
 
 class BackgroundList extends Component {
 
     render() {
-        const route = this.props.params.name;
+        const route = this.props.backgroundName;
         const dataList = backgrounds.map(item => {
+            console.log('item', item.name, route);
             return {
                 translatedName: translate('backgrounds.' + item.name),
                 selected: route === item.name,
@@ -35,37 +40,29 @@ class BackgroundList extends Component {
     .map(background => {
         return {
             avatar: {
-                //                    iconText: 'person',
                 className: `iconClass ${background.name}`
             },
-            LineContent: translate('backgrounds.' + background.name),
-            onClick: () => navigate('backgrounds/' + background.name),
+            LineContent: this.props.LineContent(background),
+            onClick: this.props.onClickLine(background),
             selected: background.selected
-            /* actions: [
-                 {
-                     iconText: 'visibility',
-                     action: () => navigate('backgrounds/' + background.name)
-                 }/*,
-                     {
-                         iconText: 'delete',
-                         action: () => alert('Delete')
-                     }
-             ]*/
         }
     });
 
         return (
-    <Grid>
-        <Column size={4}>
-            <List
-                dataList={dataList}
-                isWrapping
-                />
-        </Column>
-        <Column size={8}>
-            {this.props.children}
-        </Column>
-    </Grid>
+    <div>
+        <Grid>
+            <Column size={4}>
+                <h3 className={'custom-font website-title'}>{translate('backgrounds.title')}</h3>
+                <List
+                    dataList={dataList}
+                    isWrapping
+                    />
+            </Column>
+            <Column size={8}>
+                {this.props.children}
+            </Column>
+        </Grid>
+    </div>
 );
     }
 }
