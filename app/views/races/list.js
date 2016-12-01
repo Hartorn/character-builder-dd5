@@ -59,14 +59,13 @@ class RaceList extends Component {
 
         return (
     <Grid>
-        <Column size={6}>
+        <Column size={4}>
             <List
                 dataList={dataList}
                 isWrapping
-                nbItems={3}
                 />
         </Column>
-        <Column size={6}>
+        <Column size={8}>
             {this.props.children}
         </Column>
     </Grid>

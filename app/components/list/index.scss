@@ -4,40 +4,23 @@ ul[data-dd~="empilable"] {
     flex-flow: row wrap;
     display: flex;
     justify-content: space-around;
-    
-    @for $i from 1 through 6 {
-        &[data-dd~="nb-items-#{$i}"] > li {
-            flex: 0 1 calc(100% / #{$i});
-        }
-
-        /*
-        @media screen 
-        and (max-device-width: 320px) {
-            &[data-dd~="nb-items-#{$i}"] > li {
-                flex: 0 1 calc(100% 1);
-            }
-        }
-
-        @media screen 
+    > li {
+        flex: 0 1 calc(100% / 2);
+        
+   /* @media screen 
         and (min-device-width: 320px)
         and (max-device-width: 1024px) {
-            &[data-dd~="nb-items-#{$i}"] > li {
-                flex: 0 1 calc(100% 1);
-            }
-        }*/
+            flex: 0 1 calc(100% / 2);
+        }*/ 
+    @media screen 
+        and (max-device-width: 320px) {
+            flex: 0 1 calc(100% / 1);
+        }
+
     }
 }
 /* Portrait and Landscape */
-@media screen 
-  and (max-device-width: 320px) {
 
-}
-
-@media screen 
-  and (min-device-width: 320px)
-  and (max-device-width: 1024px) {
-
-}
 [data-dd~='list-grey-elt'] {
     //background-color: lightgrey;
     border-radius: 20px;

@@ -41,29 +41,28 @@ class BackgroundList extends Component {
             LineContent: translate('backgrounds.' + background.name),
             onClick: () => navigate('backgrounds/' + background.name),
             selected: background.selected
-           /* actions: [
-                {
-                    iconText: 'visibility',
-                    action: () => navigate('backgrounds/' + background.name)
-                }/*,
-                    {
-                        iconText: 'delete',
-                        action: () => alert('Delete')
-                    }
-            ]*/
+            /* actions: [
+                 {
+                     iconText: 'visibility',
+                     action: () => navigate('backgrounds/' + background.name)
+                 }/*,
+                     {
+                         iconText: 'delete',
+                         action: () => alert('Delete')
+                     }
+             ]*/
         }
     });
 
         return (
     <Grid>
-        <Column size={6}>
+        <Column size={4}>
             <List
                 dataList={dataList}
                 isWrapping
-                nbItems={3}
                 />
         </Column>
-        <Column size={6}>
+        <Column size={8}>
             {this.props.children}
         </Column>
     </Grid>

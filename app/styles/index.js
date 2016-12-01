@@ -12,6 +12,7 @@ import './img';
 
 // Styles for components
 import '../components/list/index.scss';
+import '../components/article/styles/index.scss';
 
 // Styles for the application
 import './layout.scss'
