@@ -1,0 +1,38 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.iconClass {
+    &.bard {
+        @include background-cover('./miniatures/class_barde.png')
+    }
+    &.barbarian {
+        @include background-cover('./miniatures/class_barbare.png')
+    }
+    &.druid {
+        @include background-cover('./miniatures/class_druide.png')
+    }
+    &.warlock {
+        @include background-cover('./miniatures/class_ensorceleur.png')
+    }
+    &.fighter {
+        @include background-cover('./miniatures/class_guerrier.png')
+    }
+    &.wizard {
+        @include background-cover('./miniatures/class_magicien.png')
+    }
+    &.paladin {
+        @include background-cover('./miniatures/class_paladin.png')
+    }
+    &.cleric {
+        @include background-cover('./miniatures/class_pretre.png')
+    }
+    &.rodeur {
+        @include background-cover('./miniatures/class_rodeur.png')
+    }
+    &.rogue {
+        @include background-cover('./miniatures/class_roublard.png')
+    }
+    &.sorcerer {
+        @include background-cover('./miniatures/class_sorcier.png')
+    }
+}

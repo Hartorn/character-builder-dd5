@@ -1,15 +1,150 @@
 @import '../../_variables.scss';
 @import '../../_mixins.scss';
 
-.iconClass {
-    &.warrior {
-        @include background-cover('./class_guerrier.png')
-    }
-    &.wizard {
-        @include background-cover('./class_magicien.png')
-    }
+.classImg {
+	height:330px;
+	&.barbarian.item-1 {
+		@include background-contain("./barbarian/female barbarian-3180184814.jpg")
+	}
+	&.barbarian.item-2 {
+		@include background-contain("./barbarian/male barbarian-3180187416.jpg")
+	}
+	&.bard.item-1 {
+		@include background-contain("./bard/half-elf female bard-3179345107.jpg")
+	}
+	&.bard.item-2 {
+		@include background-contain("./bard/human male bard 1-3179345931.jpg")
+	}
+	&.bard.item-3 {
+		@include background-contain("./bard/human male bard 2-3179343935.jpg")
+	}
+	&.cleric.item-1 {
+		@include background-contain("./cleric/dwarf male cleric-3179344459.jpg")
+	}
+	&.cleric.item-2 {
+		@include background-contain("./cleric/elf female cleric-3179344643.jpg")
+	}
+	&.cleric.item-3 {
+		@include background-contain("./cleric/elf male cleric-3180179478.jpg")
+	}
+	&.cleric.item-4 {
+		@include background-contain("./cleric/half-elf female cleric-3179345171.jpg")
+	}
+	&.cleric.item-5 {
+		@include background-contain("./cleric/human male cleric 1-3180181640.jpg")
+	}
+	&.cleric.item-6 {
+		@include background-contain("./cleric/human male cleric 2-3180179668.jpg")
+	}
+	&.cleric.item-7 {
+		@include background-contain("./cleric/human male cleric 3-3180179708.jpg")
+	}
+	&.cleric.item-8 {
+		@include background-contain("./cleric/human male cleric 4-3179346213.jpg")
+	}
+	&.druid.item-1 {
+		@include background-contain("./druid/human female druid-3179346123.jpg")
+	}
+	&.fighter.item-1 {
+		@include background-contain("./fighter/dwarf female fighter-3179344401.jpg")
+	}
+	&.fighter.item-2 {
+		@include background-contain("./fighter/dwarf male fighter 1-3179344541.jpg")
+	}
+	&.fighter.item-3 {
+		@include background-contain("./fighter/dwarf male fighter 2-3180179326.jpg")
+	}
+	&.fighter.item-4 {
+		@include background-contain("./fighter/elf female fighter-3180179378.jpg")
+	}
+	&.fighter.item-5 {
+		@include background-contain("./fighter/elf male fighter 1-3179344761.jpg")
+	}
+	&.fighter.item-6 {
+		@include background-contain("./fighter/elf male fighter 2-3179344809.jpg")
+	}
+	&.fighter.item-7 {
+		@include background-contain("./fighter/half-elf female fighter-3179345237.jpg")
+	}
+	&.fighter.item-8 {
+		@include background-contain("./fighter/half-elf male fighter-3180181010.jpg")
+	}
+	&.fighter.item-9 {
+		@include background-contain("./fighter/halfling female fighter-3179345531.jpg")
+	}
+	&.fighter.item-10 {
+		@include background-contain("./fighter/halfling male fighter-3179345611.jpg")
+	}
+	&.fighter.item-11 {
+		@include background-contain("./fighter/human female fighter 1-3179345715.jpg")
+	}
+	&.fighter.item-12 {
+		@include background-contain("./fighter/human female fighter 2-3179346163.jpg")
+	}
+	&.fighter.item-13 {
+		@include background-contain("./fighter/human male fighter 1-3179346003.jpg")
+	}
+	&.fighter.item-14 {
+		@include background-contain("./fighter/human male fighter 2-3179346037.jpg")
+	}
+	&.fighter.item-15 {
+		@include background-contain("./fighter/human male fighter 3-3179344149.jpg")
+	}
+	&.fighter.item-16 {
+		@include background-contain("./fighter/human male fighter 4-3180179866.jpg")
+	}
+	&.fighter.item-17 {
+		@include background-contain("./fighter/human male fighter 5-3180179934.jpg")
+	}
+	&.fighter.item-18 {
+		@include background-contain("./fighter/human male fighter 6-3179346283.jpg")
+	}
+	&.fighter.item-19 {
+		@include background-contain("./fighter/human male fighter 7-3179346347.jpg")
+	}
+	&.paladin.item-1 {
+		@include background-contain("./paladin/human male paladin-3180187042.jpg")
+	}
+	&.wizard.item-1 {
+		@include background-contain("./wizard/elf female wizard 1-3179344701.jpg")
+	}
+	&.wizard.item-2 {
+		@include background-contain("./wizard/elf female wizard 2-3180179436.jpg")
+	}
+	&.wizard.item-3 {
+		@include background-contain("./wizard/elf male wizard-3180180542.jpg")
+	}
+	&.wizard.item-4 {
+		@include background-contain("./wizard/gnome female wizard-3179344971.jpg")
+	}
+	&.wizard.item-5 {
+		@include background-contain("./wizard/gnome male wizard-3180180720.jpg")
+	}
+	&.wizard.item-6 {
+		@include background-contain("./wizard/half-elf female wizard-3180180924.jpg")
+	}
+	&.wizard.item-7 {
+		@include background-contain("./wizard/half-elf male wizard-3180181118.jpg")
+	}
+	&.wizard.item-8 {
+		@include background-contain("./wizard/human female wizard 1-3180181484.jpg")
+	}
+	&.wizard.item-9 {
+		@include background-contain("./wizard/human female wizard 2-3180181522.jpg")
+	}
+	&.wizard.item-10 {
+		@include background-contain("./wizard/human female wizard 3-3179343875.jpg")
+	}
+	&.wizard.item-11 {
+		@include background-contain("./wizard/human male wizard 1-3180181796.jpg")
+	}
+	&.wizard.item-12 {
+		@include background-contain("./wizard/human male wizard 2-3180179988.jpg")
+	}
+	&.wizard.item-13 {
+		@include background-contain("./wizard/human male wizard 3-3179344351.jpg")
+	}
+	&.wizard.item-14 {
+		@include background-contain("./wizard/human male wizard 4-3179346385.jpg")
+	}
 }
-
-/*$bg-halfelf: url('./race_demielfe.png');
-$bg-halforc: url('./race_demiorc.png');
-$bg-drakeide: url('./race_drakeide.png');*/

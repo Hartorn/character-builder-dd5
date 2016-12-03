@@ -1,0 +1,48 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.iconClass {
+    &.highElf {
+        @include background-cover('./miniatures/race_elfe1.png')
+    }
+    &.woodElf {
+        @include background-cover('./miniatures/race_elfe2.png')
+    }
+    &.darkElf {
+        @include background-cover('./miniatures/race_drow.png')
+    }
+    &.rockGnome {
+        @include background-cover('./miniatures/race_gnome1.png')
+    }
+    &.forestGnome {
+        @include background-cover('./miniatures/race_gnome2.png')
+    }
+    &.halfElf {
+        @include background-cover('./miniatures/race_demielfe.png')
+    }
+    &.halfOrc {
+        @include background-cover('./miniatures/race_demiorc.png')
+    }
+    &.lighfootHalfling {
+       @include background-cover('./miniatures/race_halfelin1.png')
+    }
+    &.stoutHalfling {
+       @include background-cover('./miniatures/race_halfelin2.png')
+    }
+    &.tiefling {
+       @include background-cover('./miniatures/race_tieffelin.png')
+    }
+    &.human {
+       @include background-cover('./miniatures/race_humain.png')
+    }
+    &.hillDwarf {
+       @include background-cover('./miniatures/race_nain1.png')
+    }
+    &.mountainDwarf {
+       @include background-cover('./miniatures/race_nain2.png')
+    }
+}
+
+/*$bg-halfelf: url('./race_demielfe.png');
+$bg-halforc: url('./race_demiorc.png');
+$bg-drakeide: url('./race_drakeide.png');*/

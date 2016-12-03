@@ -5,10 +5,13 @@ import ClassRoutes from './classes';
 import GeneratorRoutes from './generator';
 
 import AppLayout from '../components/app-layout';
+import HomeView from '../views/home';
 
 export default {
     path: `${__BASE_URL__}`,
     component: AppLayout,
-    indexRoute: { onEnter: ({ params }, replace) => replace(`${__BASE_URL__}home`) },
+    indexRoute: {
+        component: HomeView
+    },
     childRoutes: [...HomeRoutes, ...RacesRoutes, ...BackgroundsRoutes, ...ClassRoutes, ...GeneratorRoutes]
 };

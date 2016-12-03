@@ -1,12 +1,12 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 
 import Circle from './circle'
 
 const Workflow = ({states, current}) => {
 
     return (
-        <div className='flex'>
-            {states.map((label, idx) => <Circle key={idx} text={label} state={states.indexOf(current) === idx ? 'current' : states.indexOf(current) < idx ? 'futur' : 'past'}/> )}
+        <div className='flex workflow-container'>
+            {states.map((label, idx) => <Circle key={idx} text={label} state={states.indexOf(current) === idx ? 'current' : states.indexOf(current) < idx ? 'futur' : 'past'} />)}
         </div>
     )
 }

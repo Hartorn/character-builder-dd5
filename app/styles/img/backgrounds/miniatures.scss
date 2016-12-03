@@ -1,0 +1,44 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.iconClass {
+    &.acolyte {
+        @include background-cover('./miniatures/back_acolyte.png')
+    }
+    &.charlatan {
+        @include background-cover('./miniatures/back_charlatan.png')
+    }
+    &.criminal {
+        @include background-cover('./miniatures/back_criminel.png')
+    }
+    &.entertainer {
+        @include background-cover('./miniatures/back_amuseur.png')
+    }
+    &.folkHero {
+        @include background-cover('./miniatures/back_peuple.png')
+    }
+    &.guildArtisan {
+        @include background-cover('./miniatures/back_artisan.png')
+    }
+    &.hermit {
+        @include background-cover('./miniatures/back_ermite.png')
+    }
+    &.noble {
+        @include background-cover('./miniatures/back_noble.png')
+    }
+    &.outlander {
+        @include background-cover('./miniatures/back_outlander.png')
+    }
+    &.sage {
+        @include background-cover('./miniatures/back_sage.png')
+    }
+    &.sailor {
+        @include background-cover('./miniatures/back_marin.png')
+    }
+    &.soldier {
+        @include background-cover('./miniatures/back_soldat.png')
+    }
+    &.urchin {
+        @include background-cover('./miniatures/back_grosbras.png')
+    }
+}

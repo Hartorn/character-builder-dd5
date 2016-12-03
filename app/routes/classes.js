@@ -6,7 +6,7 @@ import ClassDetail from '../views/classes/detail';
 const routes = [
     {
         path: 'classes',
-        component: ({params}) => (<ClassListView className={params.name} />),
+        component: ({params, children}) => (<ClassListView className={params.name} children={children} />),
         childRoutes: [
             {
                 path: ':name',
