@@ -1,4 +1,3 @@
-import HomeRoutes from './home-routes';
 import RacesRoutes from './races';
 import BackgroundsRoutes from './backgrounds';
 import ClassRoutes from './classes';
@@ -13,5 +12,5 @@ export default {
     indexRoute: {
         component: HomeView
     },
-    childRoutes: [...HomeRoutes, ...RacesRoutes, ...BackgroundsRoutes, ...ClassRoutes, ...GeneratorRoutes]
+    childRoutes: [...RacesRoutes, ...BackgroundsRoutes, ...ClassRoutes, ...GeneratorRoutes]
 };

@@ -13,7 +13,7 @@ class MenuLeft extends Component {
 
     _getMenuItems() {
         return [
-            { icon: 'home', route: 'home' }, // route: 'home'
+            { icon: 'home', route: '' }, // route: 'home'
             { icon: 'pets', route: 'races' },
             { icon: 'history', route: 'backgrounds' },
             { icon: 'face', route: 'classes' },
