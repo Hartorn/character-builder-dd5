@@ -17,14 +17,21 @@ const propTypes = {
 class BuilderView extends Component {
 
     render() {
+        const currentStep = this.props.routes.reduce((acc, curr) => {
+            if (curr.path === 'generator') {
+                return true;
+            }
+            return acc === true ? curr.path : acc;
+        }, false);
+
         return (
             <div>
                 <h3 className={'custom-font website-title'}>{translate('generator.title')}</h3>
                 <Workflow
-                    current={'options'} 
-                    states={['race', 'class', 'background', 'caracs', 'classAbilities', 'proficiency', 'options', 'healthPoints', 'spells', 'equipment', 'personnalisation', 'synthesis']} 
-                />
-                <RacesList />
+                    current={currentStep}
+                    states={['race', 'class', 'background', 'caracs', 'classAbilities', 'proficiency', 'options', 'healthPoints', 'spells', 'equipment', 'personnalisation', 'synthesis']}
+                    />
+                {this.props.children}
             </div>
         );
     }

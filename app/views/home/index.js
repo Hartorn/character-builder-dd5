@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+// import checkProps from 'react/lib/checkReactTypeSpec';
+// const customPropTypes = { truc: PropTypes.string.isRequired };
+// checkProps(customPropTypes, props, 'prop', 'test-function');
+
 import Icon from 'focus-components/components/icon';
 import Link from '../../components/router/link';
 import Card from '../../components/card';
@@ -16,12 +20,7 @@ const HomeView = (props) => {
     const classes = [{ type: 'classes', nbElts: 4 }];
     const backgrounds = [{ type: 'backgrounds', nbElts: 4 }];
 
-    const gearStyle = {
-      'font-size': '150px',
-      'padding-bottom': '30px',
-      'padding-top': '30px',
-      'text-align': 'center'
-  };
+    const gearStyle = { fontSize: '150px', paddingBottom: '30px', paddingTop: '30px', textAlign: 'center' };
 
     return (
     <div className='dashboard'>
@@ -60,7 +59,7 @@ const HomeView = (props) => {
   );
 };
 HomeView.displayName = 'HomeView';
-HomeView.propsTypes = {
+HomeView.propTypes = {
 
 };
 HomeView.defaultProps = {
