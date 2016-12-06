@@ -4,3 +4,98 @@
 [data-focus='menu-brand'] {
     @include background-cover('./logo.png')
 }
+.dashboard{
+    .banner {
+       min-height: 400px;
+       @include background-contain('./landscapes/the_elders__by_vetrova-d983fp2-min2.jpg');
+    }
+
+    .classes {
+        min-height: 250px;
+        &.item-1 {
+            @include background-cover('./characters/neverwinter_branding_by_greyhues-d7ixlct-min.jpg');
+        }
+
+        // &.item-1 {
+        //     @include background-cover('./characters/banhmmer_girl_by_vetrova-d592asi-min.jpg');
+        // }
+        // &.item-2 {
+        //     @include background-cover('./characters/blizzard_warrior_by_chao_ken-d7cxby3-min.jpg');
+        // }
+        // &.item-3 {
+        //     @include background-cover('./characters/assassin_chick_by_greyhues-d8obav0-min.jpg');
+        // }    
+        // &.item-4 {
+        //     @include background-cover('./characters/mage_by_greyhues-d7ix33y-min.jpg');
+        // }
+    }
+
+    .races {
+        min-height: 250px;
+        &.item-1 {
+            @include background-cover('./characters/fantasy_races___1_4__humans_by_tyshea-d6hg5cw-min.jpg');
+        }
+        // &.item-2 {
+        //     @include background-cover('./characters/fantasy_races___2_4__elves_by_tyshea-d6hg7dq-min.jpg');
+        // }
+        // &.item-3 {
+        //     @include background-cover('./characters/fantasy_races___3_4__halflings_by_tyshea-d6hg8pa-min.jpg');
+        // }
+        // &.item-4 {
+        //     @include background-cover('./characters/fantasy_races___4_4__orcs_by_tyshea-d6hgd90-min.jpg');
+        // }
+    }
+
+    .backgrounds {
+        min-height: 250px;
+        // &.item-1 {
+        //     @include background-cover('./characters/mage_scholar_by_lucasdurham-d9a7hi3-min.jpg');
+        // }
+        // &.item-2 {
+        //     @include background-cover('./characters/dragon_age_stuff__merchant_by_mancomb_seepwood-min.jpg');
+        // }
+        &.item-3 {
+            @include background-cover('./characters/landing_character_by_greyhues-d8opyl5-min2.jpg');
+        }
+        // &.item-4 {
+        //     @include background-cover('./characters/thief_in_the_dark_by_poibuts-d8mxh89-min.jpg');
+        // }
+    }
+}
+
+[data-dd='backgrounds-img'] {
+    min-height: 250px;
+
+    [data-dd='item-1'] {
+        @include background-cover('./characters/fantasy_races___1_4__humans_by_tyshea-d6hg5cw-min.jpg');
+    }
+}
+
+[data-dd='generator-img'] {
+    min-height: 250px;
+    [data-dd='item-1'] {
+        @include background-cover('./characters/fantasy_races___1_4__humans_by_tyshea-d6hg5cw-min.jpg');
+    }
+}
+
+.dashboard ul[data-dd~="empilable"] > li {
+    flex-basis: inherit;
+}
+
+.dashboard {
+    a {
+        text-decoration:none;
+    }
+    li {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        .mdl-card__actions h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+            color:$custom-white;
+            text-decoration: none;
+        }
+    }
+}

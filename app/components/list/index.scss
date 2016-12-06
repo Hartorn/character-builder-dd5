@@ -1,6 +1,7 @@
 @import '../../styles/_variables.scss';
 
 ul[data-dd~="empilable"] {
+    list-style: none;
     flex-flow: row wrap;
     display: flex;
     justify-content: space-around;

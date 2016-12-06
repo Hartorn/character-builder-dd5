@@ -1,18 +1,70 @@
-import React, {Component} from 'react';
+import React from 'react';
+import Icon from 'focus-components/components/icon';
+import Link from '../../components/router/link';
+import Card from '../../components/card';
+import Carrousel from '../../components/carousel';
 
+import { translate } from 'focus-core/translation';
 
-const ToDoList = React.createClass({
+const HomeView = (props) => {
+    const Races = <h3 className='website-title custom-font'>{translate('races.title')}</h3>;
+    const Backgrounds = <h3 className='website-title custom-font'>{translate('backgrounds.title')}</h3>;
+    const Classes = <h3 className='website-title custom-font'>{translate('classes.title')}</h3>;
+    const Generator = <h3 className='website-title custom-font'>{translate('generator.title')}</h3>;
 
-    render () {
-        console.log('test', 'lolol');
-        return (
-      <div className='container'>
-        Home 
-      </div> 
-    );
-    }
-});
+    const races = [{ type: 'races', nbElts: 4 }];
+    const classes = [{ type: 'classes', nbElts: 4 }];
+    const backgrounds = [{ type: 'backgrounds', nbElts: 4 }];
 
+    const gearStyle = {
+      'font-size': '150px',
+      'padding-bottom': '30px',
+      'padding-top': '30px',
+      'text-align': 'center'
+  };
 
+    return (
+    <div className='dashboard'>
+      <div className='banner' />
+      <ul data-dd='empilable'>
+        <li>
+          <Link to='races'>
+            <Card actions={Races}>
+              <div className='races item-1' />
+            </Card>
+          </Link>
+        </li>
+        <li>
+          <Link to='backgrounds'>
+            <Card actions={Backgrounds}>
+              <div className='backgrounds item-3' />
+            </Card>
+          </Link>
+        </li>
+        <li>
+          <Link to='classes'>
+            <Card actions={Classes}>
+              <div className='classes item-1' />
+            </Card>
+          </Link>
+        </li>
+        <li>
+          <Link to='generator' data-dd='center'>
+            <Card actions={Generator} >
+              <Icon name={'brightness_low'} style={{ style: gearStyle }} />
+            </Card>
+          </Link>
+        </li>
+      </ul>
+    </div >
+  );
+};
+HomeView.displayName = 'HomeView';
+HomeView.propsTypes = {
 
-export default ToDoList;
+};
+HomeView.defaultProps = {
+
+};
+
+export default HomeView;

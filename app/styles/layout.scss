@@ -55,3 +55,7 @@
 .space-around {
     justify-content: space-around;
 }
+
+[data-dd~='center'] {
+    text-align: center;
+}
