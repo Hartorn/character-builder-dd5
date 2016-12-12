@@ -6,7 +6,7 @@ const Workflow = ({states, current}) => {
 
     return (
         <div className='flex workflow-container'>
-            {states.map((label, idx) => <Circle key={idx} text={label} state={states.indexOf(current) === idx ? 'current' : states.indexOf(current) < idx ? 'futur' : 'past'} />)}
+            {states.map((label, idx) => <Circle key={idx} to={`generator/${label}`} text={label} state={states.indexOf(current) === idx ? 'current' : states.indexOf(current) < idx ? 'futur' : 'past'} />)}
         </div>
     )
 }

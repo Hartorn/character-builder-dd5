@@ -12,7 +12,8 @@ export default {
             spells: 'Sorts connus',
             equipment: 'Équipement',
             personnalisation: 'Personnage',
-            synthesis: 'Synthèse'
+            synthesis: 'Synthèse',
+            level: 'Niveau'
         }
     },
     generator: {
@@ -65,7 +66,19 @@ export default {
         folkHero: 'Héros du peuple'
     },
     classes: {
-        title: 'Classes'
+        title: 'Classes',
+        bard: 'Barde',
+        barbarian: 'Barbare',
+        cleric: 'Clerc',
+        druid: 'Druide',
+        fighter: 'Guerrier',
+        monk: 'Moine',
+        paladin: 'Paladin',
+        ranger: 'Rodeur',
+        rogue: 'Roublard',
+        sorcerer: 'Ensorceleur',
+        warlock: 'Sorcier',
+        wizard: 'Magicien'
     },
     website: {
         title: "D&D 5 : Constructeur de personnage"

@@ -1,19 +1,31 @@
-import React, {PropTypes} from 'react'
-import {translate} from 'focus-core/translation'
+import React, { PropTypes } from 'react'
+import { translate } from 'focus-core/translation'
+import { Link } from '../router';
 
-const Circle = ({text, state}) => {
+const renderCircle = (text, state, hasElt) => (
+    <div className={`${hasElt ? 'workflow-elt' : ''} ${state}`} >
+        <div className={'flex space-around'}>
+            <span className={'dash left'} />
+            <div className={'circle'}>
+                <div className={'inner-circle'}></div>
+            </div>
+            <span className={'dash right'} />
+        </div>
+        <span className={'workflow-text'}>{translate('workflow.state.' + text)}</span>
+    </div>
+);
+
+const Circle = ({text, state, to}) => {
+
+    if (to) {
+        return (<Link to={to} className={'workflow-elt'}>
+            {renderCircle(text, state, false)}
+        </Link>
+        );
+    }
 
     return (
-        <div className={`workflow-elt ${state}`} >
-            <div className={'flex space-around'}>
-                <span className={'dash left'}/>
-                <div className={'circle'}>
-                    <div className={'inner-circle'}></div>
-                </div>
-                <span className={'dash right'}/>
-            </div>
-            <span className={'workflow-text'}>{translate('workflow.state.' + text)}</span>
-        </div>
+        renderCircle(text, state)
     )
 }
 

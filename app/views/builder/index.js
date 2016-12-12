@@ -28,8 +28,8 @@ class BuilderView extends Component {
             <div>
                 <h3 className={'custom-font website-title'}>{translate('generator.title')}</h3>
                 <Workflow
-                    current={currentStep}
-                    states={['race', 'class', 'background', 'caracs', 'classAbilities', 'proficiency', 'options', 'healthPoints', 'spells', 'equipment', 'personnalisation', 'synthesis']}
+                    current={currentStep ? currentStep : ''}
+                    states={['race', 'background', 'level', 'class', 'caracs', 'classAbilities', 'proficiency', 'options', 'healthPoints', 'spells', 'equipment', 'personnalisation', 'synthesis']}
                     />
                 {this.props.children}
             </div>

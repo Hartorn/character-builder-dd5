@@ -12,6 +12,13 @@ span.dash {
     display: inline-flex;
     flex-direction: column;
     flex-grow: 1;
+    div {
+        text-align: center;
+    }
+}
+
+a.workflow-elt {
+    text-decoration: none;
 }
 
 .inner-circle {

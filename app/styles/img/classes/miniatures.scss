@@ -12,7 +12,7 @@
         @include background-cover('./miniatures/class_druide.png')
     }
     &.warlock {
-        @include background-cover('./miniatures/class_ensorceleur.png')
+        @include background-cover('./miniatures/class_sorcier.png')
     }
     &.fighter {
         @include background-cover('./miniatures/class_guerrier.png')
@@ -26,13 +26,13 @@
     &.cleric {
         @include background-cover('./miniatures/class_pretre.png')
     }
-    &.rodeur {
+    &.ranger {
         @include background-cover('./miniatures/class_rodeur.png')
     }
     &.rogue {
         @include background-cover('./miniatures/class_roublard.png')
     }
     &.sorcerer {
-        @include background-cover('./miniatures/class_sorcier.png')
+        @include background-cover('./miniatures/class_ensorceleur.png')
     }
 }

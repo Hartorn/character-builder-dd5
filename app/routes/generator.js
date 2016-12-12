@@ -29,6 +29,19 @@ const routes = [
                 ]
             },
             {
+                path: 'background',
+                component: (props) => (<BackList backgroundName={props.params.background} onClickLine={(background) => () => navigate('generator/background/' + background.name)} {...props} />),
+                childRoutes: [
+                    {
+                        path: ':background',
+                        component: ({params}) => (<BackDetail backgroundName={params.background} />)
+                    }
+                ]
+            },
+            {
+                path: 'level'
+            },
+            {
                 path: 'class',
                 component: (props) => (<ClassList className={props.params.class} onClickLine={(classElt) => () => navigate('generator/class/' + classElt.name)} {...props} />),
                 childRoutes: [
@@ -39,16 +52,32 @@ const routes = [
                 ]
             },
             {
-                path: 'background',
-                component: (props) => (<BackList backgroundName={props.params.background} onClickLine={(background) => () => navigate('generator/background/' + background.name)} {...props} />),
-                childRoutes: [
-                    {
-                        path: ':background',
-                        component: ({params}) => (<BackDetail backgroundName={params.background} />)
-                    }
-                ]
+                path: 'caracs'
+            },
+            {
+                path: 'proficiency'
+            },
+            {
+                path: 'options'
+            },
+            {
+                path: 'healthPoints'
+            },
+            {
+                path: 'spells'
+            },
+            {
+                path: 'equipment'
+            },
+            {
+                path: 'classAbilities'
+            },
+            {
+                path: 'personnalisation'
+            },
+            {
+                path: 'synthesis'
             }
-
         ]
     }
 ];
