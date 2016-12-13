@@ -1,0 +1,16 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+// Setting dark background
+.builder-summary {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+    .summary-elt {
+        flex: 1 0 20%;
+        text-align: center;
+    }
+}

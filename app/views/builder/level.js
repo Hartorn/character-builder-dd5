@@ -9,34 +9,51 @@ import connectToStore from 'focus-components/behaviours/store/connect';
 
 import GeneratorStore from '../../stores/builder';
 
-const LevelView = ({level}) => {
-    return (
-        <div>
+class LevelView extends Component {
+
+    componentWillMount() {
+        this.setState({
+            level:this.props.level
+        });
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            level:nextProps.level
+        });
+    }
+
+    handleValidate() {
+        dispatcher.handleViewAction({
+            data: { builderLevel: this.state.level },
+            type: 'update'
+        });
+        navigate('generator/class');
+    }
+
+    render() {
+        return (
             <div>
-                <h3 className={'custom-font'}>{translate('generator.levelTitle')}</h3>
+                <div>
+                    <h3 className={'custom-font'}>{translate('generator.levelTitle')}</h3>
+                </div>
+                <div>
+                    <input
+                        type="number"
+                        step="1"
+                        value={this.state.level}
+                        min="1"
+                        max="20"
+                        onChange={(event) => this.setState({ level: event.target.value})}
+                        />
+                </div>
+                <br />
+                <div>
+                    <Button label={'action.validate'} onClick={() => this.handleValidate()} />
+                </div>
             </div>
-            <div>
-                <input
-                    type="number"
-                    step="1"
-                    value={level}
-                    min="1"
-                    max="20"
-                    onChange={(event) => {
-                        dispatcher.handleViewAction({
-                            data: { builderLevel: event.target.value },
-                            type: 'update'
-                        });
-                    }
-                    }
-                    />
-            </div>
-            <br />
-            <div>
-                <Button label={'action.validate'} onClick={() => navigate('generator/class')} />
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
 LevelView.displayName = 'LevelView';

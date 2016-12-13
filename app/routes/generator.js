@@ -3,13 +3,13 @@ import React from 'react';
 import GeneratorView from '../views/builder';
 
 import RacesList from '../views/races/list';
-import RaceDetail from '../views/races/detail';
+import RaceDetail from '../views/builder/race-short-detail';
 
 import ClassList from '../views/classes/list';
-import ClassDetail from '../views/classes/detail';
+import ClassDetail from '../views/builder/class-short-detail';
 
 import BackList from '../views/backgrounds/list';
-import BackDetail from '../views/backgrounds/detail';
+import BackDetail from '../views/builder/background-short-detail';
 
 import LevelView from '../views/builder/level';
 
