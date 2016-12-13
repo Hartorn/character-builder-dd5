@@ -18,6 +18,7 @@ import { navigate } from '../utilities/router';
 const routes = [
     {
         path: 'generator',
+        indexRoute: { onEnter: ({ params }, replace) => replace(`${__BASE_URL__}generator/race`) },
         component: GeneratorView,
         childRoutes: [
             {
