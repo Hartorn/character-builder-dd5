@@ -1,4 +1,7 @@
 export default {
+    action: {
+        validate: 'Valider'
+    },
     workflow: {
         state: {
             class: 'Classe',
@@ -17,7 +20,8 @@ export default {
         }
     },
     generator: {
-        title: 'Créateur de personnage'
+        title: 'Créateur de personnage',
+        levelTitle: 'Niveau du personnage'
     },
     races: {
         title: 'Races',

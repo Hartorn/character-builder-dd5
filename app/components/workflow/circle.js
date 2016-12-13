@@ -3,7 +3,7 @@ import { translate } from 'focus-core/translation'
 import { Link } from '../router';
 
 const renderCircle = (text, state, hasElt) => (
-    <div className={`${hasElt ? 'workflow-elt' : ''} ${state}`} >
+    <div className={`${!hasElt ? 'workflow-elt' : ''} ${state}`} >
         <div className={'flex space-around'}>
             <span className={'dash left'} />
             <div className={'circle'}>
@@ -19,7 +19,7 @@ const Circle = ({text, state, to}) => {
 
     if (to) {
         return (<Link to={to} className={'workflow-elt'}>
-            {renderCircle(text, state, false)}
+            {renderCircle(text, state, true)}
         </Link>
         );
     }

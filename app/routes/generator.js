@@ -11,6 +11,8 @@ import ClassDetail from '../views/classes/detail';
 import BackList from '../views/backgrounds/list';
 import BackDetail from '../views/backgrounds/detail';
 
+import LevelView from '../views/builder/level';
+
 import { navigate } from '../utilities/router';
 
 const routes = [
@@ -39,7 +41,8 @@ const routes = [
                 ]
             },
             {
-                path: 'level'
+                path: 'level',
+                component: LevelView
             },
             {
                 path: 'class',

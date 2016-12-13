@@ -6,6 +6,7 @@ import Circle from '../../components/workflow/circle'
 
 import RacesList from '../races/list'
 import { navigate } from '../../utilities/router'
+import Summary from './summary'
 
 const defaultProps = {
 
@@ -31,6 +32,7 @@ class BuilderView extends Component {
                     current={currentStep ? currentStep : ''}
                     states={['race', 'background', 'level', 'class', 'caracs', 'classAbilities', 'proficiency', 'options', 'healthPoints', 'spells', 'equipment', 'personnalisation', 'synthesis']}
                     />
+                <Summary />
                 {this.props.children}
             </div>
         );
