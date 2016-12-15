@@ -13,13 +13,13 @@ class LevelView extends Component {
 
     componentWillMount() {
         this.setState({
-            level:this.props.level
+            level: this.props.level
         });
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            level:nextProps.level
+            level: nextProps.level
         });
     }
 
@@ -35,7 +35,7 @@ class LevelView extends Component {
         return (
             <div>
                 <div>
-                    <h3 className={'custom-font'}>{translate('generator.levelTitle')}</h3>
+                    <h3 className={'custom-font website-title'}>{translate('generator.levelTitle')}</h3>
                 </div>
                 <div>
                     <input
@@ -44,7 +44,7 @@ class LevelView extends Component {
                         value={this.state.level}
                         min="1"
                         max="20"
-                        onChange={(event) => this.setState({ level: event.target.value})}
+                        onChange={(event) => this.setState({ level: event.target.value })}
                         />
                 </div>
                 <br />

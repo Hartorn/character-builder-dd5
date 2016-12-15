@@ -8,6 +8,8 @@ import connectToStore from 'focus-components/behaviours/store/connect';
 import { navigate } from '../../utilities/router';
 import GeneratorStore from '../../stores/builder';
 
+const caracRender = (name, abilities) => (<div><label>{translate('abilities.field.' + name)}</label>{abilities[name]}</div>)
+
 const SummaryView = (props) => {
     return (
         <div>
@@ -30,6 +32,17 @@ const SummaryView = (props) => {
                 {props.class.name &&
                     <div className={'class-container summary-elt'} >
                         <h5>{translate('classes.' + props.class.name)}</h5>
+                    </div>
+                }
+                {props.abilities.STR &&
+                    <div className={'class-container summary-elt'} >
+                        <h5>{translate('workflow.state.caracs')}</h5>
+                        {caracRender('STR', props.abilities)}
+                        {caracRender('DEX', props.abilities)}
+                        {caracRender('CON', props.abilities)}
+                        {caracRender('INT', props.abilities)}
+                        {caracRender('WIS', props.abilities)}
+                        {caracRender('CHA', props.abilities)}
                     </div>
                 }
             </div>

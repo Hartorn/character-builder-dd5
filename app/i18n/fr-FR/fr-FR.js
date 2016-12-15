@@ -2,6 +2,16 @@ export default {
     action: {
         validate: 'Valider'
     },
+    abilities: {
+        field: {
+            STR: 'Force',
+            DEX: 'Dextérité',
+            CON: 'Constitution',
+            INT: 'Intelligence',
+            WIS: 'Sagesse',
+            CHA: 'Charisme'
+        }
+    },
     workflow: {
         state: {
             class: 'Classe',

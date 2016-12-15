@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'focus-components/components/button';
 
 import GeneratorView from '../views/builder';
 
@@ -12,8 +13,14 @@ import BackList from '../views/backgrounds/list';
 import BackDetail from '../views/builder/background-short-detail';
 
 import LevelView from '../views/builder/level';
+import AbilitiesView from '../views/builder/abilities';
+import SynthesisView from '../views/builder/synthesis';
 
 import { navigate } from '../utilities/router';
+
+const ButtonNavigate = (dest) => (
+    <Button label={'action.validate'} onClick={() => navigate('generator/' + dest)} />
+);
 
 const routes = [
     {
@@ -56,31 +63,41 @@ const routes = [
                 ]
             },
             {
-                path: 'caracs'
+                path: 'caracs',
+                component: AbilitiesView
             },
             {
-                path: 'proficiency'
+                path: 'classAbilities',
+                component: () => (ButtonNavigate('proficiency'))
+
             },
             {
-                path: 'options'
+                path: 'proficiency',
+                component: () => (ButtonNavigate('options'))
             },
             {
-                path: 'healthPoints'
+                path: 'options',
+                component: () => (ButtonNavigate('healthPoints'))
             },
             {
-                path: 'spells'
+                path: 'healthPoints',
+                component: () => (ButtonNavigate('spells'))
             },
             {
-                path: 'equipment'
+                path: 'spells',
+                component: () => (ButtonNavigate('equipment'))
             },
             {
-                path: 'classAbilities'
+                path: 'equipment',
+                component: () => (ButtonNavigate('personnalisation'))
             },
             {
-                path: 'personnalisation'
+                path: 'personnalisation',
+                component: () => (ButtonNavigate('synthesis'))
             },
             {
-                path: 'synthesis'
+                path: 'synthesis',
+                component: SynthesisView
             }
         ]
     }
