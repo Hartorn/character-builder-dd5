@@ -1,6 +1,9 @@
 export default {
     action: {
-        validate: 'Valider'
+        validate: 'Valider',
+        exportHtml: 'Exporter en HTML',
+        showPreview: 'Afficher la prévisualisation',
+        hidePreview: 'Masquer la prévisualisation'
     },
     abilities: {
         field: {

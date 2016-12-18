@@ -16,11 +16,11 @@ class Article extends Component {
                         {children}
                     </div>
                 </div>
-                <button className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" onClick={() => this.setState({ isVisible: true })}>
-                    <i className="material-icons">more_vert</i>
-                </button>
             </section >
         );
+        /*<button className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" onClick={() => this.setState({ isVisible: true })}>
+            <i className="material-icons">more_vert</i>
+          </button>*/
     }
 }
 

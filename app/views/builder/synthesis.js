@@ -13,8 +13,11 @@ import GeneratorStore from '../../stores/builder';
 import CharacterSheet from '../character-sheet';
 
 class SynthesisView extends Component {
+    state = {
+        showPreview: false
+    }
 
-    handleValidate() {
+    exportHtmlAction() {
         const charSt = findDOMNode(this.refs['character-sheet']);
         exportHtml(charSt, document.styleSheets, 'Feuille de personnage', 'character-sheet.html');
     }
@@ -25,16 +28,20 @@ class SynthesisView extends Component {
                 <div>
                     <h3 className={'custom-font website-title'}>{translate('workflow.state.synthesis')}</h3>
                 </div>
-                <CharacterSheet ref='character-sheet' />
                 <div>
-                    <Button label={'action.validate'} onClick={() => this.handleValidate()} />
+                    <Button label={'action.exportHtml'} onClick={() => this.exportHtmlAction()} />
                 </div>
+                <br />
+                <div>
+                    <Button label={`${this.state.showPreview ? 'action.hidePreview' : 'action.showPreview'}`} onClick={() => this.setState({ showPreview: !this.state.showPreview })} />
+                </div>
+                <CharacterSheet ref='character-sheet' isVisible={!this.state.showPreview} />
             </div>
         );
     }
 }
 
-SynthesisView.displayName = 'LevelView';
+SynthesisView.displayName = 'SynthesisView';
 SynthesisView.propTypes = {
 
 };

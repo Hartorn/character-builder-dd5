@@ -7,7 +7,7 @@ import Sheet3 from './sheet3'
 class CharacterSheet extends Component {
     render() {
         return (
-            <div data-dd='character-sheet'>
+            <div data-dd={`character-sheet ${this.props.isVisible ? 'hidden' : ''}`}>
                 <Sheet1 />
                 <Sheet2 />
                 <Sheet3 />

@@ -7,4 +7,6 @@ import './classes/miniatures.scss';
 import './races/index.scss';
 import './races/miniatures.scss';
 
+import './character-sheet/index.scss';
+
 import './index.scss';
