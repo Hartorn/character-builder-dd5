@@ -3,19 +3,16 @@ import React, { PropTypes } from 'react'
 import Circle from './circle'
 
 const Workflow = ({states, current}) => {
-    let canGoTo = true;
     return (
         <div className='flex workflow-container'>
             {states.map((label, idx) => {
-                if (states.indexOf(current) === idx) {
-                    canGoTo = false;
-                }
+                const currentIdx = states.indexOf(current);
                 return (
                     <Circle
                         key={idx}
-                        to={canGoTo ? `generator/${label}` : null}
+                        to={currentIdx < idx ? null : `generator/${label}`}
                         text={label}
-                        state={states.indexOf(current) === idx ? 'current' : states.indexOf(current) < idx ? 'futur' : 'past'}
+                        state={currentIdx === idx ? 'current' : currentIdx < idx ? 'futur' : 'past'}
                         />
                 )
             }

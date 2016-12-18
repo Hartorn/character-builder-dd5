@@ -1,6 +1,19 @@
 export default {
     action: {
-        validate: 'Valider'
+        validate: 'Valider',
+        exportHtml: 'Exporter en HTML',
+        showPreview: 'Afficher la prévisualisation',
+        hidePreview: 'Masquer la prévisualisation'
+    },
+    abilities: {
+        field: {
+            STR: 'Force',
+            DEX: 'Dextérité',
+            CON: 'Constitution',
+            INT: 'Intelligence',
+            WIS: 'Sagesse',
+            CHA: 'Charisme'
+        }
     },
     workflow: {
         state: {

@@ -1,0 +1,145 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+@page {
+        size: A4 portrait;
+        // size: 21cm 29.7cm;
+        margin: 0mm 0mm 0mm 0mm;// 30mm 45mm 30mm 45mm;
+}
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+[data-focus~='page-content'] [data-dd~='hidden']{
+    visibility: hidden;
+}
+[data-dd~='character-sheet'] {
+    div.sheet {
+        page-break-after: always;
+        position: relative;
+
+        @media print {
+            width: 21cm;
+            height: 29.7cm;
+        }
+
+        @media screen {
+            width: 21cm;
+            height: 29.7cm;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            margin-top: 10px;
+        }
+    }
+
+	[data-dd~='header-1'] {
+		@include background-contain('./header-sheet1.png');
+        height: 4cm;
+        .character-name {
+            top: 2cm;
+            left: 1.5cm;
+        }
+        .level-class-name {
+            top: 1.5cm;
+            left: 9.1cm;
+        }
+        .historique-name {
+            top: 1.5cm;
+            left: 14cm;
+        }
+        .player-name {
+            top: 1.5cm;
+            left: 17cm;
+        }
+        .race-name {
+            top: 2.5cm;
+            left: 9.1cm;
+        }
+        .alignement-name {
+            top: 2.5cm;
+            left: 14cm;
+        }
+        .xp-name {
+            top: 2.5cm;
+            left: 17cm;
+        }
+	} 
+
+	[data-dd~='header-2'] {
+		@include background-contain('./header-sheet2.png');
+        height: 4cm;
+        .character-name {
+            top: 1.6cm;
+            left: 1.5cm;
+        }
+        .age-name {
+            top: 1.3cm;
+            left: 9.1cm;
+        }
+        .height-name {
+            top: 1.3cm;
+            left: 14cm;
+        }
+        .weight-name {
+            top: 1.3cm;
+            left: 17cm;
+        }
+        .eyes-name {
+            top: 2.3cm;
+            left: 9.1cm;
+        }
+        .skin-name {
+            top: 2.3cm;
+            left: 14cm;
+        }
+        .hair-name {
+            top: 2.3cm;
+            left: 17cm;
+        }
+	} 
+    
+    [data-dd~='header-3'] {
+        .label {
+            font-size: 10px;
+        }
+		@include background-contain('./header-sheet3.png');
+        height: 4cm;
+        .spellcaster-name {
+            top: 1.8cm;
+            left: 2cm;
+        }
+        .spellcaster-label {
+            top: 2.8cm;
+            left: 2.2cm;
+        }
+        .spell-memorisation-name {
+            top: 1.6cm;
+            left: 10.7cm;
+        }
+        .spell-memorisation-label {
+            top: 2.5cm;
+            left: 9.5cm;
+        }
+        .saving-throw-name {
+            top: 1.6cm;
+            left: 14.2cm;
+        }
+        .saving-throw-label {
+            top: 2.5cm;
+            left: 12.5cm;
+        }
+        .spell-attack-name {
+            top: 1.6cm;
+            left: 18cm;
+        }
+        .spell-attack-label {
+            top: 2.5cm;
+            left: 17cm;
+        }
+	} 
+}

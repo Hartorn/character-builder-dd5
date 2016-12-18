@@ -22,3 +22,4 @@ import '../components/carousel/styles.scss';
 
 // Styles for the application
 import './layout.scss'
+import './generator.scss'
