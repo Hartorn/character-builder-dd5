@@ -12,6 +12,10 @@ const Sheet2 = (props) => {
                 <div className='skin-name absolute'>Brun doré</div>
                 <div className='hair-name absolute'>Dreadlocks noirs</div>
             </div>
+            <div data-dd='column-11 column' className='absolute'>
+            </div>
+            <div data-dd='column-23 column' className='absolute'>
+            </div>
         </div>
     );
 }

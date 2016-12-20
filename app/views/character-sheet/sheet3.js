@@ -13,6 +13,12 @@ const Sheet3 = (props) => {
                 <div className='spell-attack-name absolute'>5</div>
                 <div className='spell-attack-label label absolute'>BONUS D'ATTAQUE</div>
             </div>
+            <div data-dd='column column-11' className='absolute'>
+            </div>
+            <div data-dd='column column-3' className='absolute'>
+            </div>
+            <div data-dd='column column-4' className='absolute'>
+            </div>
         </div>
     );
 }
