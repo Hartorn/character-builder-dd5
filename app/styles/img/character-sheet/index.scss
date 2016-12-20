@@ -15,7 +15,8 @@
     position: absolute;
 }
 [data-focus~='page-content'] [data-dd~='hidden']{
-    visibility: hidden;
+    //visibility: hidden;
+    display: none;
 }
 [data-dd~='character-sheet'] {
     div.sheet {
@@ -40,6 +41,7 @@
 	[data-dd~='header-1'] {
 		@include background-contain('./header-sheet1.png');
         height: 4cm;
+        width: 21cm;
         .character-name {
             top: 2cm;
             left: 1.5cm;
@@ -142,4 +144,153 @@
             left: 17cm;
         }
 	} 
+    [data-dd~='column']{
+        width: 7cm;
+        height: 25.7cm;
+        top: 4cm;
+    }
+    [data-dd~='column-1']{
+        width: 3cm;
+        height: 25.7cm;
+        top: 4cm;
+    }
+    [data-dd~='column-2']{
+        width: 4cm;
+        height: 18cm;
+        top: 4cm;
+        margin-left: 3cm;
+    }
+    [data-dd~='column-3']{
+        margin-left: 7cm;
+    }
+    [data-dd~='column-23']{
+        margin-left: 7cm;
+        width: 14cm;
+    }
+    [data-dd~='column-4']{
+        margin-left: 14cm;
+    }
+    [data-dd='ability-container']{
+        width: 3cm;
+        height: 18cm;
+		@include background-contain('./back2.png');
+        [data-dd='empty-ability']{
+            height: 0.8cm;
+            position: relative;
+        }
+        [data-dd='ability']{
+            [data-dd='ability-label']{
+                // position: relative;
+                // width: 1.8cm;
+                // text-align: center;
+                // font-size: 10px;
+                // margin-left: 0.7cm;
+                position: relative;
+                width: 1.65cm;
+                text-align: center;
+                font-size: 10px;
+                margin-left: 0.7cm;
+            }
+            [data-dd='ability-value']{
+                margin-left: 1.3cm;
+                position: relative;
+                top: 0.3cm;
+            }
+            [data-dd='ability-bonus']{
+                margin-left: 1.3cm;
+                position: relative;
+                top: 0.7cm;
+            }
+            height: 2.5cm;
+            width: 3cm;
+            position: relative;
+            // margin-left: 0.5cm;
+            margin-bottom: 0.3cm;
+       		@include background-contain('./back3.png');
+        }
+    }
+    [data-dd='perception-container']{
+    	@include background-cover('./back8.png');   
+        width: 7cm;
+        position: relative;
+        height: 12mm;
+        top: 18cm;
+        //margin-left: 6mm;
+        [data-dd='perception-value']{
+            position: absolute;
+            margin-left: 3mm;
+            width: 8mm;
+            height: 8mm;
+            line-height: 8mm;
+            top: 2mm;
+            text-align: center;
+        }
+        [data-dd='perception-label']{
+            position: absolute;
+            text-align: center;
+            font-size: 10px;
+            margin-left: 1.5cm;
+            width: 5cm;
+            top: 2mm;
+            line-height: 8mm;
+        }
+    }
+    [data-dd='proficiencies-languages']{
+       	//@include background-cover('./back18.png');
+        width: 68mm;
+        border: solid 1px black;
+        height: 62mm;
+        margin-left: 2mm;
+        top:19.2cm;
+    }
+    [data-dd='inspiration']{
+        @include background-contain('./back4.png');   
+        width: 4cm;
+        height: 1cm;
+    }
+    [data-dd='proficiency-bonus']{
+        @include background-contain('./back5.png');
+        width: 4cm;
+        height: 1.3cm;   
+    }
+    [data-dd='saving-throws']{
+        border: solid 1px black;
+        height: 6cm;   
+    }
+    [data-dd='skills']{
+        border: solid 1px black;
+        height: 9.7cm;   
+    }
+    [data-dd='ca-init-speed']{
+        border: solid 1px black;
+        height: 2cm;   
+    }
+    [data-dd='health-point']{
+        border: solid 1px black;
+        height: 3.2cm;   
+    }
+    [data-dd='temporary-health-point']{
+        border: solid 1px black;
+        height: 3cm;   
+    }
+    [data-dd='hp-dice-death']{
+        border: solid 1px black;
+        height: 3cm;   
+    }
+    [data-dd='attack-spell']{
+        border: solid 1px black;
+        height: 6.6cm;   
+    }
+    [data-dd='equipement']{
+        border: solid 1px black;
+        height: 7.3cm;   
+    }
+    [data-dd='capacities']{
+        border: solid 1px black;
+        height: 13.9cm;   
+    }
+    [data-dd='background']{
+        border: solid 1px black;
+        height: 11.4cm;   
+    }
 }
