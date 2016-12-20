@@ -14,6 +14,7 @@
 .absolute{
     position: absolute;
 }
+
 [data-focus~='page-content'] [data-dd~='hidden']{
     //visibility: hidden;
     display: none;
@@ -22,15 +23,10 @@
     div.sheet {
         page-break-after: always;
         position: relative;
-
-        @media print {
-            width: 21cm;
-            height: 29.7cm;
-        }
+        width: 21cm;
+        height: 29.7cm;
 
         @media screen {
-            width: 21cm;
-            height: 29.7cm;
             margin-left: auto;
             margin-right: auto;
             background-color: white;
