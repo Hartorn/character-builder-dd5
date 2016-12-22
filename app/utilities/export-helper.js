@@ -35,10 +35,7 @@ const exportHtml = (htmlElement, styleSheets, titleText, filename) => {
         const styleSheet = styleSheets[i];
         for (let j = 0; j < styleSheet.cssRules.length; j++) {
             const cssRule = styleSheet.cssRules[j];
-            if(!!cssRule.selectorText && cssRule.selectorText.indexOf('.classImg') === -1 && cssRule.selectorText.indexOf('.iconClass') === -1 && cssRule.selectorText.indexOf('.dashboard') === -1){
-                if(cssRule.cssText.indexOf('background-image') !== -1){
-                    console.log('rule',cssRule.selectorText);
-                }
+            if (!!cssRule.selectorText && cssRule.selectorText.indexOf('.classImg') === -1 && cssRule.selectorText.indexOf('.iconClass') === -1 && cssRule.selectorText.indexOf('.dashboard') === -1) {
                 rules += cssRule.cssText;
                 rules += '\n';
             }

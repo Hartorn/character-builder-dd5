@@ -3,7 +3,10 @@ export default {
         validate: 'Valider',
         exportHtml: 'Exporter en HTML',
         showPreview: 'Afficher la prévisualisation',
-        hidePreview: 'Masquer la prévisualisation'
+        hidePreview: 'Masquer la prévisualisation',
+        select: 'Sélectionner',
+        reset: 'Réinitialiser',
+        nextStep: 'Etape suivante'
     },
     abilities: {
         field: {

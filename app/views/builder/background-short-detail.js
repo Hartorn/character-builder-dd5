@@ -32,7 +32,7 @@ class BackgroundShortDetail extends Component {
                 <div>
                     <Button label={'action.validate'} onClick={() => {
                         this.selectBackground();
-                        navigate('generator/level');
+                        navigate('generator/class');
                     }
                     } />
                 </div>

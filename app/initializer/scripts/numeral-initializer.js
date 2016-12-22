@@ -1,4 +1,4 @@
-import {language} from 'focus-core/definition/formatter/number';
+import { language } from 'focus-core/definition/formatter/number';
 import frLanguage from 'numeral/languages/fr';
 
 
