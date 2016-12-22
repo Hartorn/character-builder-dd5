@@ -289,4 +289,32 @@
         border: solid 1px black;
         height: 11.4cm;   
     }
+    [data-dd='physical-appearance']{
+        width: 7cm;
+        border: 1px black solid;
+        height: 8.5cm;
+    }
+    [data-dd='past-story']{
+        width: 7cm;
+        height: 17cm;
+        top: 8.5cm;
+        border: black solid 1px;
+    }
+   [data-dd='allies-organisation']{
+        width: 14cm;
+        height: 8.5cm;
+        border: black solid 1px;
+    }
+   [data-dd='additional-capacities']{
+        width: 14cm;
+        height: 8.5cm;
+        border: black solid 1px;
+        top: 8.5cm;
+    }
+    [data-dd='treasures']{
+        width: 14cm;
+        height: 8.5cm;
+        border: solid black 1px;
+        top: 17cm;
+    }
 }

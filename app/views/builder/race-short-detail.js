@@ -29,7 +29,7 @@ class RaceShortDetail extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div className='button-bar'>
                     <Button label={'action.validate'} onClick={() => {
                         this.selectRace();
                         navigate('generator/background');

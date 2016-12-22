@@ -29,9 +29,18 @@ const SummaryView = (props) => {
                         <h5>{translate('generator.levelTitle') + ' ' + props.level}</h5>
                     </div>
                 }
-                {props.class.name &&
+                {props.class.length > 0 &&
                     <div className={'class-container summary-elt'} >
-                        <h5>{translate('classes.' + props.class.name)}</h5>
+                        <h5>
+                            {props.class.reduce((acc, elt) => {
+                                let toReturn = acc;
+                                if (toReturn.length > 0) {
+                                    toReturn += ' / ';
+                                }
+                                toReturn += translate('classes.' + elt.name) + ' ' + elt.level;
+                                return toReturn;
+                            }, '')}
+                        </h5>
                     </div>
                 }
                 {props.abilities.STR &&
@@ -68,7 +77,7 @@ const connect = connectToStore(
             race: GeneratorStore.getBuilderRace() || {},
             background: GeneratorStore.getBuilderBackground() || {},
             level: GeneratorStore.getBuilderLevel() || 0,
-            class: GeneratorStore.getBuilderClass() || {},
+            class: GeneratorStore.getBuilderClass() || [],
             abilities: GeneratorStore.getBuilderAbilities() || {},
             proficiency: GeneratorStore.getBuilderProficiency() || {}
         };

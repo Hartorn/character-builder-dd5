@@ -51,6 +51,21 @@
     display: flex;
 }
 
+// Popin
+[data-focus='popin'] > [data-focus='popin-overlay'] > [data-focus='popin-window']{
+    background-color: $background-grey;
+}
+
+[data-focus='popin'][data-type='full'][data-size='small'] > div > [data-focus='popin-window'] {
+    display: flex;
+    width: 33.3333vw;
+
+    > div {
+        margin: auto;
+        text-align: center;
+    }
+}
+
 // Space Around
 .space-around {
     justify-content: space-around;
@@ -64,5 +79,13 @@
     margin: auto;
     h5 {
         margin: 0;  
+    }
+}
+
+.button-bar {
+    padding: 5px 0;
+    
+    button {
+        margin-right:5px;
     }
 }
