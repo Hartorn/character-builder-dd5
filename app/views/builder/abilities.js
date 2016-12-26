@@ -43,7 +43,7 @@ class AbilitiesView extends Component {
 
     renderField(fieldName) {
         return (
-            <div>
+            <div data-dd='ability-container'>
                 <label>{translate('abilities.field.' + fieldName)}</label>
                 <input
                     type="number"
@@ -63,7 +63,7 @@ class AbilitiesView extends Component {
                 <div>
                     <h3 className={'custom-font  website-title'}>{translate('workflow.state.caracs')}</h3>
                 </div>
-                <div>
+                <div data-dd='abilities-container'>
                     {this.renderField('STR')}
                     {this.renderField('DEX')}
                     {this.renderField('CON')}

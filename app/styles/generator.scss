@@ -14,3 +14,14 @@
         text-align: center;
     }
 }
+
+[data-dd='abilities-container']{
+
+    [data-dd='ability-container']{
+        width: 200px;
+        display: flex;
+        margin: auto;
+    }
+}
+
+

@@ -6,9 +6,12 @@
 }
 .dashboard{
     .banner {
-       min-height: 400px;
-       @include background-contain('./landscapes/the_elders__by_vetrova-d983fp2-min2.jpg');
-    }
+        @media screen 
+            and (min-device-width: 1025px) {
+                min-height: 400px;
+                @include background-contain('./landscapes/the_elders__by_vetrova-d983fp2-min2.jpg');
+            }
+        }
 
     .classes {
         min-height: 250px;
