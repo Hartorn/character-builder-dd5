@@ -30,7 +30,7 @@
         "PAGE_TITLE": "Focus demonstration application",
         "OUTPUT_DIR": "./docs",
         "OUTPUT_PUBLIC_PATH":"/character-builder-dd5/",
-        "BASE_URL": "/character-builder-dd5/"
+        "BASE_URL": "/character-builder-dd5/",
         "LOCAL_FOCUS": false,
         "LEGACY_SEARCH_API": false,
         "DEV": false,
