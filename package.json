@@ -13,32 +13,32 @@
     "npm": "3.10.x"
   },
   "scripts": {
-    "bundle": "better-npm-run bundle",
-    "build": "npm run bundle",
+    "production": "better-npm-run production",
+    "build": "npm run production",
     "start": "npm run start:npm",
     "start:npm": "better-npm-run webpack-dev-server-npm-focus",
     "watch": "better-npm-run watch"
   },
   "main": "app/index.js",
   "betterScripts": {
-    "bundle": {
+    "production": {
       "command": "builder run focus-webpack-bundle",
       "env": {
-        "ANCHOR_CLASS": "demo-app",
+		"ANCHOR_CLASS": "demo-app",
         "BABELIFIED_PATH": "./app",
         "ENTRY_FILE_PATH": "./app/index",
-        "PAGE_TITLE": "Your project application",
-        "API_HOST": "localhost",
-        "API_PORT": 8080,
-        "OUTPUT_DIR": "./",
-        "OUTPUT_PUBLIC_PATH": "./",
-        "GENERATE_HTML": false,
+        "PAGE_TITLE": "Focus demonstration application",
+        "OUTPUT_DIR": "./docs",
+        "OUTPUT_PUBLIC_PATH":"/character-builder-dd5/",
+        "BASE_URL": "/character-builder-dd5/"
         "LOCAL_FOCUS": false,
         "LEGACY_SEARCH_API": false,
         "DEV": false,
+        "SOURCE_MAPS": false,
+        "MINIMIFY": true,
         "NODE_ENV": "production",
         "BABEL_ENV": "production",
-        "BASE_URL": "/"
+        "GENERATE_HTML": false
       }
     },
     "watch": {
