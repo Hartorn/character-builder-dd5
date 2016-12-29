@@ -6,7 +6,7 @@ ul[data-dd~="empilable"] {
     display: flex;
     justify-content: space-around;
     > li {
-        flex: 0 1 calc(100% / 2);
+        flex: 0 1 50%;
         
    /* @media screen 
         and (min-device-width: 320px)
@@ -14,8 +14,8 @@ ul[data-dd~="empilable"] {
             flex: 0 1 calc(100% / 2);
         }*/ 
     @media screen 
-        and (max-device-width: 320px) {
-            flex: 0 1 calc(100% / 1);
+        and (max-device-width: 1024px) {
+            flex: 0 1 100%
         }
 
     }

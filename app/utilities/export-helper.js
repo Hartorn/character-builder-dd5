@@ -52,7 +52,7 @@ const exportHtml = (htmlElement, styleSheets, titleText, filename) => {
     downloadData(html.outerHTML, filename, 'text/html');
 }
 
-export default {
+export {
     exportHtml,
     downloadData
 }
