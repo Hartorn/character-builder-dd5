@@ -4,10 +4,10 @@ import Slider from 'react-slick'
 const buildCarouselEltList = (nbElts, type) => {
     return [...Array(nbElts).keys()].map((item) => {
         return (
-            {
-                type: type,
-                idx: item + 1
-            }
+        {
+            type: type,
+            idx: item + 1
+        }
         )
     })
 };
@@ -22,12 +22,15 @@ const correctClass = (classElt) => {
             return classElt;
     }
 }
+
+
 /**
  * Shuffles array in place. ES6 version
  * @param {Array} a items The array containing the items.
+ * @returns {Array} the input array, shuffled (no copy)
  */
-// see http://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript
 const shuffle = (a) => {
+    // see http://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript
     for (let i = a.length; i; i--) {
         let j = Math.floor(Math.random() * i);
         [a[i - 1], a[j]] = [a[j], a[i - 1]];
@@ -68,7 +71,7 @@ const Carousel = ({typesArray}) => {
                     {buildAndRandomize(typesArray)}
                 </Slider>
             }
-        </div>
+        </div >
     );
 }
 

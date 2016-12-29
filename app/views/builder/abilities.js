@@ -46,13 +46,13 @@ class AbilitiesView extends Component {
             <div data-dd='ability-container'>
                 <label>{translate('abilities.field.' + fieldName)}</label>
                 <input
-                    type="number"
-                    step="1"
+                    type='number'
+                    step='1'
                     value={this.state.abilities[fieldName]}
-                    min="1"
-                    max="18"
+                    min='1'
+                    max='18'
                     onChange={this.handleOnChange(fieldName)}
-                    />
+                />
             </div>
         );
     }
