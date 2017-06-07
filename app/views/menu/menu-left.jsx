@@ -7,7 +7,7 @@ import { Link } from '../../components/router';
 import { navigate } from '../../utilities/router';
 
 //custom web component
-import QuickSearchView from '../search/quick';
+// import QuickSearchView from '../search/quick';
 
 class MenuLeft extends Component {
 
