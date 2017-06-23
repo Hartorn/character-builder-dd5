@@ -90,12 +90,7 @@ class ClassShortDetail extends Component {
         return (
             <div>
                 <div className='button-bar'>
-                    <Button label={'action.select'} onClick={() => {
-                        this.setState({
-                            displayPopin: true
-                        });
-                    }
-                    } />
+                    <Button label={'action.select'} onClick={::this.showPopin} />
                     {hasLevel &&
                         <Button label={'action.reset'} onClick={::this.resetClass} />
                     }
@@ -110,23 +105,15 @@ class ClassShortDetail extends Component {
                     </Section>
                 </Article>
                 {this.state.displayPopin && (
-                    <Popin open={true} size={'small'} onPopinClose={::this.hidePopin}>
+                    <Popin open size={'small'} onPopinClose={::this.hidePopin}>
                         <div>
                     <div>{'Quel niveau souhaitez-vous dans la classe : ' + translate('classes.' + this.props.className) + ' ?'}</div>
                     <br />
-                    <input
-                        type="number"
-                        step="1"
-                        value={this.state.level}
-                        min="1"
-                        max="20"
-                        onChange={(event) => this.onChangeLevel(event.target.value)}
-                        />
+                    <input type='number' step='1' value={this.state.level} min='1' max='20' onChange={(event) => this.onChangeLevel(event.target.value)} />
                 </div>
                 <br />
                 <Button label={'action.validate'} onClick={::this.selectClass} />
-                    </Popin>
-        )
+                    </Popin> )
     }
             </div>
         );

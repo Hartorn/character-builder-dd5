@@ -1,4 +1,4 @@
-import {translate, init} from 'focus-core/translation';
+import { init } from 'focus-core/translation';
 import traductionFiles from '../../i18n';
 
 export default () => {
@@ -6,12 +6,16 @@ export default () => {
 
     // Initialize translations configuration.
     const i18nConfig = {
-        resStore: traductionFiles,
+        resources: traductionFiles,
+        debug: __DEV__,
         lng: 'fr-FR'///langOpts.i18nCulture
     };
 
     // Plugin initialization.
-    init(i18nConfig, () => {
+    init(i18nConfig, (err) => {
+        if (err) {
+            console.error('   |--- Error on initialization of Translation.', err)
+        }
         return console.info('   |--- Translation correctly initialized.');
     });
 

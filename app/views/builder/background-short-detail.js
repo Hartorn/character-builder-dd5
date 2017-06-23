@@ -29,12 +29,13 @@ class BackgroundShortDetail extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div className='button-bar'>
                     <Button label={'action.validate'} onClick={() => {
                         this.selectBackground();
                         navigate('generator/class');
                     }
-                    } />
+                    }
+                    />
                 </div>
                 <Article title={'backgrounds.' + this.props.backgroundName}>
                     <Section title={'Lorem ipsum dolor'}>
