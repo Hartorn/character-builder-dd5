@@ -5,14 +5,14 @@ import MenuLeft from '../views/menu/menu-left';
 import Footer from '../views/footer';
 
 const CustomLayout = (props) => (
-        <div>
-          <Layout
-              Footer={Footer}
-              MenuLeft={MenuLeft}
-          >
-          {props.children}
-          </Layout>
-        </div>
+    <div>
+        <Layout
+            Footer={Footer}
+            MenuLeft={MenuLeft}
+        >
+            {props.children}
+        </Layout>
+    </div>
 );
 CustomLayout.displayName = 'CustomAppLayout';
 
