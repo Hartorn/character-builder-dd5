@@ -1,20 +1,22 @@
-import 'babel-preset-focus/dist/focus-polyfill';
+// import 'babel-preset-focus/dist/focus-polyfill';
 
-import focusDemoConf from '../package.json';
-import focusCoreConf from 'focus-core/package.json';
-import focusComponentsConf from 'focus-components/package.json';
-import appConfigInitializer from './initializer/scripts/app-configuration-initializer';
-import userInitializer from './initializer/scripts/user-initializer';
-
-console.info(
-    `
-        FOCUS DEMO
-        version: ${focusDemoConf.version}
-        focus-core: ${focusCoreConf.version}
-        focus-components: ${focusComponentsConf.version}
-        web: http://getfocus.io
-    `
-);
+// import focusDemoConf from '../package.json';
+// import focusCoreConf from 'focus-core/package.json';
+// import focusComponentsConf from 'focus-components/package.json';
+import { initialize as appConfigInitializer } from './initializer/scripts/app-configuration-initializer';
+import { initialize as userInitializer } from './initializer/scripts/user-initializer';
+import { initialize as afterDomContentLoadedScript } from './initializer/after';
+import { initialize as beforeDomContentLoadedScript } from './initializer/before'
+import application from './application';
+// console.info(
+//     `
+//         FOCUS DEMO
+//         version: ${focusDemoConf.version}
+//         focus-core: ${focusCoreConf.version}
+//         focus-components: ${focusComponentsConf.version}
+//         web: http://getfocus.io
+//     `
+// );
 
 // Flag to know if DOM was loaded
 document.addEventListener('DOMContentLoaded', () => { window._hasFiredDOMContentLoaded = true; });
@@ -22,16 +24,14 @@ document.addEventListener('DOMContentLoaded', () => { window._hasFiredDOMContent
 
 const appInit = () => {
     // initializers before DOM CONTENT LOADED
-    const beforeDomContentLoadedScript = require('./initializer/before');
-    beforeDomContentLoadedScript.initialize();
+    beforeDomContentLoadedScript();
 
     // initializers after DOM CONTENT LOADED
     const onDOMContentLoaded = () => {
-        const afterDomContentLoadedScript = require('./initializer/after');
         const info = console.info;
-        afterDomContentLoadedScript.initialize();
+        afterDomContentLoadedScript();
         info('#########################[START APP]############################');
-        require('./application')(info);
+        application(info);
         info('#########################[APP STARTED]##########################');
     };
 
@@ -45,7 +45,7 @@ const appInit = () => {
 console.log('[INITIALIZER - BEFORE ANYTHING (prerequisites)]');
 // Initalisation de la configuration applicative (avant tout le reste, si besoin pour autres initialisers)
 // Initalisation de l'utilisateur connecté
-appConfigInitializer.initialize(() => userInitializer.initialize(appInit));
+appConfigInitializer(() => userInitializer(appInit));
 
 
 //import app demo styles

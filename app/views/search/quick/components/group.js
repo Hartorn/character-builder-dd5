@@ -1,13 +1,13 @@
 // libraires
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import Translation from 'focus-components/behaviours/translation';
-import formatter from  'focus-core/definition/formatter/number';
+import formatter from 'focus-core/definition/formatter/number';
 import history from 'focus-core/history';
-import {quickSearchStore} from 'focus-core/search/built-in-store';
+import { quickSearchStore } from 'focus-core/search/built-in-store';
 import dispatcher from 'focus-core/dispatcher';
 
 //web components
-import {component as Button} from 'focus-components/common/button/action';
+import Button from 'focus-components/components/button';
 
 const propTypes = {
     count: PropTypes.number.isRequired,
@@ -39,7 +39,7 @@ class QuickSearchGroup extends Component {
             type: 'update',
             identifier: 'ADVANCED_SEARCH'
         });
-        if(showAllHandler){
+        if (showAllHandler) {
             showAllHandler();
         }
         history.navigate('#search/advanced', true);
@@ -49,7 +49,7 @@ class QuickSearchGroup extends Component {
     render() {
         const {children, count, groupKey, showAllHandler} = this.props
         return (
-            <div data-focus="group-container">
+            <div data-focus='group-container'>
                 <div data-focus='group-container-title'>
                     <div>
                         <h3>
@@ -62,7 +62,7 @@ class QuickSearchGroup extends Component {
                         <Button shape={null} color='accent' handleOnClick={this.showAllClickHandler} label={this.i18n('search.show.all')} />
                     </div>
                 </div>
-                <div data-focus="group-container-results">
+                <div data-focus='group-container-results'>
                     {children}
                 </div>
             </div>

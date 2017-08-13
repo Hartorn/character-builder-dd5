@@ -26,6 +26,16 @@ const exportHtml = (htmlElement, styleSheets, titleText, filename) => {
     const html = doc.documentElement;
     // Head
     const head = doc.createElement('head');
+    // X UA Compatible
+    const xuaComp = doc.createElement('meta');
+    xuaComp.httpEquiv = 'X-UA-Compatible';
+    xuaComp.content = 'IE=edge';
+    head.appendChild(xuaComp);
+    // Charset
+    const charset = doc.createElement('meta');
+    charset.charset = 'UTF-8';
+    head.appendChild(charset);
+    // Title
     const title = doc.createElement('title');
     title.innerText = titleText;//'Character sheet';
     head.appendChild(title);
