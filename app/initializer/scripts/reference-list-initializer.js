@@ -1,4 +1,4 @@
-import {config} from 'focus-core/reference';
+import { config } from 'focus-core/reference';
 //import masterdataServices from '../../services/masterdata';
 
 // load here all your reference lists
@@ -10,14 +10,14 @@ export default () => {
             return Promise.resolve(
                 //here call your webservice to get scope references
                 [
-                    {code: 'ALL', label: 'search.scope.all'},
-                    {code: 'movie', label: 'search.scope.movie'},
-                    {code: 'person', label: 'search.scope.person'}
+                    { code: 'ALL', label: 'search.scope.all' },
+                    { code: 'movie', label: 'search.scope.movie' },
+                    { code: 'person', label: 'search.scope.person' }
                 ]
             ).then(scopes => {
                 //here define application icons
                 scopes.map(_applyAdditionalScopeProperties);
-                return scopes  ;
+                return scopes;
             });
         }
     });

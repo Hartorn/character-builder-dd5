@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Router, browserHistory } from 'react-router';
 import Routes from './routes';
 
-import { hasRole } from 'focus-core/user';
+// import { hasRole } from 'focus-core/user';
 import { filterByRoles } from './utilities/router'
 
 export default function startApp(logger) {
@@ -13,7 +13,7 @@ export default function startApp(logger) {
         <Router
             history={browserHistory}
             routes={filterByRoles(Routes)}
-            />
+        />
     ),
         document.getElementsByClassName(`${__ANCHOR_CLASS__}`)[0]
     );

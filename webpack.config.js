@@ -3,7 +3,7 @@ const envParser = require('webpack-focus/webpack-utilities/env-parser');
 
 const myConfig = baseConfig(process.env, {});
 myConfig.addAlias('focus-core', './node_modules/focus-core');
-myConfig.addAlias('focus-components', './node_modules/focus-components');
+myConfig.addAlias('focus-components', './node_modules/focus-components/src');
 myConfig.addAlias('react', './node_modules/react');
 myConfig.addAlias('react-dom', './node_modules/react-dom');
 myConfig.addAlias('moment', './node_modules/moment');
@@ -40,5 +40,5 @@ myConfig.addComplexLoader(20, {
 });
 */
 const buildConfig = myConfig.toWebpackConfig(envParser(process.env));
-buildConfig.module.rules[buildConfig.module.rules.length -1].options.limit = 10000;
+// buildConfig.module.rules[buildConfig.module.rules.length - 1].options.limit = 10000;
 module.exports = buildConfig;

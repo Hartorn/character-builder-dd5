@@ -7,6 +7,7 @@ export default () => {
     // Initialize translations configuration.
     const i18nConfig = {
         resources: traductionFiles,
+        resStore: traductionFiles,
         debug: __DEV__,
         lng: 'fr-FR'///langOpts.i18nCulture
     };
